@@ -23,6 +23,25 @@
 
 \definecharacterkerning[headertracking][factor=0.1]
 
+\definecharacterkerning[incipittracking][factor=0.03]
+\define[1]\incipit{{\setcharacterkerning[incipittracking]{\sc #1}}}
+
+\setuplanguage[en][apostrophe=yes]
+
+\definedelimitedtext[translatorsnote][blockquote]
+\setupdelimitedtext[transplatorsnote][
+    style=\em,
+    leftmargin=1.5pc,
+    rightmargin=1.5pc,
+    indenting={yes,small},
+    before={\blank[medium]},
+    after={\blank{medium}},
+]
+
+\define\finis{
+    \symbol[diamond]
+}
+
 \starttext
 
 \startalignment[middle]
@@ -31,10 +50,6 @@
     {\blank[line]\tfa \documentvariable{author} \blank}
 \stopalignment
 
-\definecharacterkerning[incipittracking][factor=0.03]
-\define[1]\incipit{{\setcharacterkerning[incipittracking]{\sc #1}}}
-
-\setuplanguage[en][apostrophe=yes]
 
 \startsection
 
@@ -94,8 +109,56 @@ Compared to this structure that offers actualizable connection possibilities, th
 
 The allegory shouldn’t be overused; but you wouldn’t go wrong by assuming that in the social domain, and especially in scientific research, order also emerges from the combination of order and disorder.\footnote{[Original footnote] A view that has become almost fashionable today. Cf. e.g. Henri Atlan, \quotation{Du bruit comme principe d'auto-organisation}, {\em Communications} 18 (1972), pp. 21--36; Anthony Wilden, \quotation{L'\'ecriture et le bruit dans la morphogen\`ese du syst\`eme ouvert}, {\em Communications} 18 (1972), pp. 48--71. My Zettalkasten returns under the number 21/13d26g104,1 the references: self-reference, noise, morphogenesis/self-organisation, system/environment, evolution (variation), difference.} his specification of emergence does not negate scrutinization, it rather enables it. Contrary to the old distinction of emergence and validity, nowadays, we assume that it is both impossible and methodologically unsound to isolate these aspects; that is because the generation of random stimuli needs organisation, if only to match the requirements of speed, frequency and success rate posed in a dynamic society.
 
-On this abstract level of communication that is related to the philosophy of science as well as towards empirical research, the Zettelkasten is surely just one of many possibilities. Incidents during reading play a role, and even misunderstandings caused by interdisciplinary thought processes. Last but not least, the traditional “unity of research and education” is a source of friction that generates incidents. We can confirm that communication with Zettelkastens, compared to other options, is a viable solution and has many advantages regarding information density, speed, and mutual amenability.
+On this abstract level of communication that is related to the philosophy of science as well as towards empirical research, the Zettelkasten is surely just one of many possibilities. Incidents during reading play a role, and even misunderstandings caused by interdisciplinary thought processes. Last but not least, the traditional “unity of research and education” is a source of friction that generates incidents. We can confirm that communication with Zettelkastens, compared to other options, is a viable solution and has many advantages regarding information density, speed, and mutual amenability.\finis
 
 \stopsection
+
+\subject{Translator's Note}
+
+\starttranslatorsnote
+The original article by Luhmann is charged with his unique concepts that he developed for his social systems theory and a laconic German that is typical to the north of Germany. This is a strange challenge for any translator since you want to be faithful to the original, but at the same time there is a need similar to transposition in music: Transposition means that you lift {\em everything} up a pitch. I’d like to show you a translation of a paragraph that highlights the issue of translation itself:
+\startblockquote
+French is a fine park, Italian a big, bright, colorful wood. But German is almost a primeval forest, so dense and mysterious, so without a passage and yet with a thousand paths. You can’t get lost in a park, and not so easily and dangerously in the bright Italian wood; but in the German jungle, within four, five minutes, you can go missing. Because the path seems so difficult, many try to march through as straight as possible, which violates the nature of this language. It surely wants a main direction but invites deviating from to the left and to the right by its hundred paths and pathlets, and shortly back to it. (My translation.)
+\stopblockquote
+
+Take the German word “selbstbewusst”. It has the same origin as the English “self-conscious”. But the meaning is the opposite. In German, it is connoted with having a strong self-esteem. In English, it is connoted with having low self-esteem. Think back to the metaphor of music: A note does not have a mood. The mood is in the relationship to other notes. But it feels as if the note itself has mood.
+
+There are nine pending explanations of specific terms Luhmann used (e.g., “communicative relationing of relations”). Luhmann seemed to have fallen into the habit of talking in terms that can only be properly understood if you are familiar with his work. The late Wittgenstein would be either happy or sad, depending on whether he talked to Luhmann or about Luhmann. So if a section seems rather opaque or even bizarre to you, ask in the forum, and perhaps it will trigger a pending explanation. But don’t count on fast reaction times since I am taking a break from Luhmann because of a Luhmannian overdose.
+
+\stoptranslatorsnote
+
+\subject{Comments on the Translation}
+
+\starttranslatorsnote
+
+The original is: Niklas Luhmann (1981): {\em Kommunikation mit Zettelkästen: Ein Erfahrungsbericht}, Opladen: Westdeutscher Verlag.
+
+Manfred Kühn created the first translation. Many thanks for your service!
+
+My priority is accessibility: If I had to make the decision between Luhmann’s specific writing style and understandability, I chose the latter.
+
+German is in itself a technical and literal language. A telling example is the German word for “Nipple”: “Brustwarze” is directly translated to “breast wart”. So, keep that in mind if you want to express your love in German. Another example would be “Menschenauflauf” which is directly translated to “human casserole” but means “confluence” or even just “crowd”.
+
+Luhmann had a very technical style of writing that sometimes is connected to his way of thinking and sometimes just an artifact of his unique style of speaking and writing. Luhmann spoke in a “ready to print”-way,\footnote{Niklas Luhmann (2009): {\em Einführung in die Systemtheorie}, Heidelberg: Carl-Auer Verlag, p. 7.} which is often just the ability to avoid messing up complicated speech. I tried to distinguish both causes of his technical style and sometimes chose an easier to understand formulation if necessary.
+
+In German, the indefinite pronoun “man” (as in: “Man kann das.”, literally: “One can do this.”) is used commonly, especially in more “introvert” context (dialects, people etc.). I sometimes opted to use “you” instead to enhance the readability since I feel that using ‘one’ felt awkward in English.
+
+I decided to translate the German “Zettelkasten” as “Zettelkasten” since I consider this an established term.
+
+I chose “Zettelkastens” as plural since the “ä” in “Zettelkästen” feels too foreign and too disrespectful towards the English language to inject.
+
+“Zettel” is an ambiguous term. I decided to translate it into “paper slip” when Luhmann seems to refer to actual physical piece and “note” when he refers to the individual note in his Zettelkasten.
+
+“Zufall” (”chance”) can be translated as “randomness” or “coincidence”. I tried to choose the term that reflects the underlying tone of the sentences. Sometimes it is not just about the randomness in itself but the slightly positively connoted “coincidence”. I like to imagine that Bob Ross lends his voice to point to the “happy accidents” that happen while working with Zettelkastens.
+
+\stoptranslatorsnote
+
+\subject{Special Thanks}
+
+\starttranslatorsnote
+
+Thank you, Alex Nelson, for your helpful comments!
+
+\stoptranslatorsnote
 
 \stoptext
