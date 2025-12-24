@@ -6,6 +6,14 @@
 \setupbodyfont[times,11pt]
 \setuppapersize[letter]
 
+\setuplayout
+    [backspace=1in,     % Left margin
+     cutspace=1in,      % Right margin
+     width=fit,         % Calculate text width from back/cutspace
+     margin=0cm,        % Removes extra marginal note area
+     edge=0cm]          % Removes extra edge area
+
+
 \setupwhitespace[big]
 
 \setuphead[section][
