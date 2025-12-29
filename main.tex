@@ -41,6 +41,10 @@
     rightmargin=1.5em,      % Standard blockquote indentation from right
 ]
 
+\setupheadertexts
+    [\doifnot\pagenumber1{\tfx\em\documentvariable{title}}]
+    [\doifnot\pagenumber1{\tfx\em\documentvariable{author}}]
+
 
 \setuppagenumbering[location=footer,middle]
 
@@ -58,8 +62,7 @@
 \setuplanguage[en][apostrophe=yes]
 
 \definedelimitedtext[translatorsnote][blockquote]
-\setupdelimitedtext[translatorsnote][
-    leftmargin=1.5pc,
+\setupdelimitedtext[translatorsnote][ leftmargin=1.5pc,
     rightmargin=1.5pc,
     indenting={yes,small},
 ]
@@ -82,13 +85,14 @@
 
 \starttext
 
+\page[noheader]
+
 \startalignment[middle]
     {\blank[2*line] \tfc \documentvariable{title} \blank}
     {\tfb \documentvariable{subtitle} \blank}
     {\blank[line]\tfa \documentvariable{author} \blank}
     {\tf\em Translated by \documentvariable{translator} \blank}
 \stopalignment
-
 
 \startsection
 
