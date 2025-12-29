@@ -13,14 +13,34 @@
      margin=0cm,        % Removes extra marginal note area
      edge=0cm]          % Removes extra edge area
 
-
 \setupwhitespace[big]
+
+\setupwhitespace[none]
+\setupindenting[yes, small]
+
+\setupnotation[footnote][
+    numbercommand=\firstofoneargument,
+    alternative=left,
+    width=2em,
+    headalign=flushright,
+    hang=1,              % Enables hanging indent
+    distance=0.5em,      % Space between number and text
+]
 
 \setuphead[section][
     conversion=Romannumerals,
     alternative=middle,
     numbercommand=,
 ]
+
+\setupquotation[
+    indenting=no,           % Removes first-line indentation inside the quote
+    before={\blank[big]},   % Adds clear space above the blockquote
+    after={\blank[big]},    % Adds clear space below the blockquote
+    leftmargin=1.5em,       % Standard blockquote indentation from left
+    rightmargin=1.5em,      % Standard blockquote indentation from right
+]
+
 
 \setuppagenumbering[location=footer,middle]
 
@@ -38,13 +58,10 @@
 \setuplanguage[en][apostrophe=yes]
 
 \definedelimitedtext[translatorsnote][blockquote]
-\setupdelimitedtext[transplatorsnote][
-    style=\em,
+\setupdelimitedtext[translatorsnote][
     leftmargin=1.5pc,
     rightmargin=1.5pc,
     indenting={yes,small},
-    before={\blank[medium]},
-    after={\blank{medium}},
 ]
 
 \define\finis{
